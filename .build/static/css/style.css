@@ -41,7 +41,7 @@ html,body {
 }
 
 body {
-	font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 16px/1 "Lato", Helvetica, Arial, sans-serif;
 	color: #777;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -63,18 +63,10 @@ body {
 	z-index: 100;
 }
 
-#wrapper {
+#wrapper, .wrapper {
 	max-width: 990px;
 	margin: 0 auto;
 	padding: 100px 40px 100px 40px;
-}
-
-#wrapper.post {
-	max-width: 880px;
-}
-
-#header {
-	border-bottom: 1px solid #eee;
 }
 
 img {
@@ -142,13 +134,44 @@ img {
 	height: auto;
 }
 
-#thumbnails a span {
-	color: #999;
-	display: inline-block;
-	display: none;
-	font-size: 15px;
+#thumbnails a span.title {
+	color: #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 30px;
 	font-weight: 400;
-	margin: 20px 0;
+	padding: 20px;
+}
+
+
+#thumbnails a span.color-bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 10px;
+	right: 0;
+}
+
+#thumbnails a span.tags {
+	color: #eee;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 20px;
+	text-transform: uppercase;
+}
+
+#thumbnails a span.opaque-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #0D0B25;
+	opacity: .65;
 }
 
 #thumbnails a:hover {
@@ -232,113 +255,31 @@ p.small {
 	display: block;
 }
 
-/* Post Page */
 #header {
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #ddd;
 	margin-bottom: 20px;
+	position: relative;
 }
 
-.post {
-	margin-bottom: 60px;
-}
-
-#post-meta {
-	font-size: 13px;
-	font-weight: bold;
-	line-height: 1.4;
-	margin-bottom: 40px;
-	padding-top: 40px;
-	border-top: 1px solid #eee;
-	color: #444;
-}
-
-#post-meta div {
-	display: inline-block;
-}
-
-#post-meta div span {
-	color: #aaa;
-	font-weight:5 00;
-	display: block;
-	margin-bottom: 2px;
-}
-
-#post-meta div.date {
-	float: right;
+#header .name {
+	position: absolute;
+	top: 0;
+	right: 0;
 	text-align: right;
-	position: relative;
-	top: 1px;
-	font: 300 20px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #aaa;
 }
 
-#sharing {
-	float: right;
-	margin: -2px;
+#header .contact-container {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
 }
 
-#sharing a {
-	font-size: 23px;
-	margin-left: 2px;
-	margin-top: 4px;
-	color: #d4d4d4;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#sharing a:hover {
-	color: #444;
-}
-
-/* Post Navigation */
-#post-nav {
-	border-top: 1px solid #eee;
-	text-align: center;
-	padding-top: 20px;
-	font-size: 13px;
-	font-weight: 500;
-}
-
-#post-nav span {
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	-ms-transition: all 0.1s linear;
-	-o-transition: all 0.1s linear;
-	transition: all 0.1s linear;
-	position: relative;
-}
-
-#post-nav span.prev {
-	float: left;
-}
-
-#post-nav span.next {
-	float: right;
-}
-
-#post-nav span .arrow {
-	position: relative;
-	padding: 1px;
-}
-
-#post-nav span.prev:hover .arrow {
-	left: -4px;
-}
-
-#post-nav span.next:hover .arrow {
-	right: -4px;
-}
-
-#post-nav span.prev:hover {
-	left: -3px;
-}
-
-#post-nav span.next:hover {
-	right: -3px;
+#header .name h2 {
+	font-size: 30px;
 }
 
 @media screen and (max-width: 540px) {
-	#wrapper { padding: 20px 40px; }
+	#wrapper, .wrapper { padding: 20px 40px; }
 	#header { margin-bottom: 40px; }
 	h1 { font-size: 28px; }
 	#footer { margin-top: 40px; padding-bottom: 20px; }
@@ -358,7 +299,7 @@ p.small {
 	a#docs { display: none; }
 	#thumbnails a:first-child { margin-top: 0; }
 	#header { text-align: center; margin-bottom: 0; }
-	#wrapper { padding: 20px 20px 40px 20px; }
+	#wrapper, .wrapper { padding: 20px 20px 40px 20px; }
 	.post { margin-bottom: 40px; }
 	#footer { text-align: center; padding-bottom: 15px; }
 }

@@ -1,15 +1,33 @@
-title: Project One
+title: A suite of analytics reports
 thumbnail: /static/images/image-thumbnail.jpg
-tags: Image
-date: 15-08-2013
+tags: Research & Conceited
+date: 15-08-2015
+color: #FE284E
+headerImg: /static/image/image-thumbnail.jpg
+projectThumb: /static/image/image-thumbnail.jpg
+
+
 
 {% extends "post.html" %}
 {% block body %}
 {% filter markdown %}
 
-<img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/>
 
 Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
 
+
 {% endfilter %}
+
 {% endblock body %}
+
+
+{% block headerText %}
+	<div class='title'>About the project</div>
+	<p>
+		For two and a half years, two BloomBoard employees had been building custom tableau reports for each orgnanization that purchased analytics dashboards, our primary revenue generating product.  In order to replace that product with a scalable one, we needed to design and build a new suite of reports that would meet the diverse needs of the customers using the tableau reporting platform.
+ 	</p>
+	<div class='title'>What I did</div>
+	<p>
+		For two and a half years, two BloomBoard employees had been building custom tableau reports for each orgnanization that purchased analytics dashboards, our primary revenue generating product.  In order to replace that product with a scalable one, we needed to design and build a new suite of reports that would meet the diverse needs of the customers using the tableau reporting platform.
+ 	</p>
+{% endblock headerText %}
