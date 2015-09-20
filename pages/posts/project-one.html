@@ -1,19 +1,54 @@
 title: A suite of analytics reports
-thumbnail: /static/images/image-thumbnail.jpg
-tags: Research & Conceited
-date: 15-08-2015
+thumbnail: ./static/images/Analytics.png
+tags: Research & Data Viz
+date: 20-08-2015
 color: #FE284E
-headerImg: /static/image/image-thumbnail.jpg
-projectThumb: /static/image/image-thumbnail.jpg
-
+headerImg: ../static/images/reports-header.png
+projectThumb: ../static/images/image-thumbnail.jpg
+focus: Data visualization & user research 
+year: Dec 2014
+role: Lead researcher & designer 
 
 
 {% extends "post.html" %}
 {% block body %}
 {% filter markdown %}
 
+<h2> Task-based testing &amp; user interviews provide guidance from old to new  </h2>
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+<p> With no tracking data on how users interacted with the old tableau reports, we first set out to understand what problems the reports actually needed to solve: What questions did our users want their data to answer? I led remote usability tests that combined task-based testing on the old reports with more foundational questions about the value of our data to our users, and was able to determine user needs for a reporting suite. </p>
+
+<p> I synthesized notes from calls with 12 administrators and distilled their needs into three core areas  for reports. </p>
+
+<img src="../static/images/three-reports.png"class="2x"/>
+
+<h2>A frame for thinking about visualizations </h2>
+
+<p> I designed a four-question template to  guide brainstorming  for the three core areas while keeping our visualization efforts focused.  The prototype engineer and I then worked together to understand the ways we could grab and manipulate the various data sources, which served as constraints as we worked quickly through wireframe designs. </p>
+
+<img src="../static/images/Vizframe.png" style="border:1px solid #eee" class="2x"/>
+
+<h2>Rapid iterative prototyping with real data  </h2>
+
+<p> Once we had chosen the data manipulations that seemed to answer our users' questions,  I worked closely with the prototype engineer to build out reports with real data, ensuring actual data wouldn’t break the designs.   We then connected with users to confirm our reports were solving their needs, adjusting the visualizations and other UI elements as we uncovered usabilty problems and incorrect assumptions.</p>
+
+ <p>In the end, we discovered that the third report &mdash; the calibration report &mdash;  was only a perceived need;  ultimately, our users' underlying need was for a calibration tool, not a report. </p>. </p>
+
+<img src="../static/images/iterations.png" class="2x"/>
+
+<h2> A comprehensive approach to style </h2>
+<p>After we finalized report concepts, I defined reusable styles so that we could build new reports quickly and consistently in the future.  The style guide codifies rules for shared typography, layouts, colors and interactive elements. </p>
+
+<img src="../static/images/styleguide.png" class="2x"/>
+
+<h2> Dynamic, readable reports that users love </h2>
+<p> The end result was  two dynamic, in-depth reports that greatly improved the way our users were able to understand and interact with their data. We received an email from one user who said simply, </p>
+<p class="pull-quote"> &ldquo;These reports are SOOOOOO much better!!&rdquo; </p>
+
+<figure>
+	<img src="../static/images/obsprogress_2.png" class="2x"/>
+	<figcaption> The two final reports </figcaption>
+</figure>
 
 
 {% endfilter %}
@@ -21,13 +56,21 @@ Displays images in a grid, with individual pages optionally describing the image
 {% endblock body %}
 
 
+
 {% block headerText %}
 	<div class='title'>About the project</div>
 	<p>
-		For two and a half years, two BloomBoard employees had been building custom tableau reports for each orgnanization that purchased analytics dashboards, our primary revenue generating product.  In order to replace that product with a scalable one, we needed to design and build a new suite of reports that would meet the diverse needs of the customers using the tableau reporting platform.
+		For two and a half years, two BloomBoard employees had been building custom Tableau reports (a third-party tool) for each organization that purchased analytics dashboards, our primary revenue-generating product.  In order to replace that product with a scalable one, we needed to design and build a new suite of reports that would meet the diverse requirements of all customers without the need for customized reports.
  	</p>
-	<div class='title'>What I did</div>
+	<div class='title'>My role</div>
 	<p>
-		For two and a half years, two BloomBoard employees had been building custom tableau reports for each orgnanization that purchased analytics dashboards, our primary revenue generating product.  In order to replace that product with a scalable one, we needed to design and build a new suite of reports that would meet the diverse needs of the customers using the tableau reporting platform.
+		I led the entire UX process for the reports, beginning with foundational research through implementation of the final UI.
+ 	</p>
+
+ 	<div class="title"> Results </div>
+ 	<p>
+ 		The final product eliminated the need for custom reports and has generated $500,000+  in revenue to date. 
  	</p>
 {% endblock headerText %}
+
+

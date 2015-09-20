@@ -1,16 +1,70 @@
-title: Project Two
-thumbnail: /static/images/image-thumbnail.jpg
-tags: Image
-date: 1-09-2013
-color: red
-headerImg: /static/image/image-thumbnail.jpg
-projectThumb: /static/image/image-thumbnail.jpg
+title: Opening a marketplace
+thumbnail: ./static/images/Marketplace.png
+tags: Interaction & Visual 
+date: 10-08-2015
+color: #538199
+headerImg: ../static/images/marketplace-head.png
+projectThumb: ../static/images/image-thumbnail.jpg
+focus: Visual & mobile design
+year: Mar 2015
+role: Lead desginer
+
+
 
 {% extends "post.html" %}
 {% block body %}
 {% filter markdown %}
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+<!-- <h4 class="step-type"> Interaction design </h4>  -->
+<h2> Show and Tell what we're all about  </h2>
+
+<p> Opening our marketplace to users without enterprise context meant that we needed to provide some sort of explanation or indication of what the BloomBoard marketplace had to offer. In order to maintain a consistent experience for existing users, and in an effort to mimic more consumer-oriented products, my team opted to skip a traditional landing page in favor of allowing users to experience the product without creating an account.  I identified UI and functionality changes required throughout the site in order to place searching and browsing in front of the sign-in wall, and designated user actions that would prompt the account creation flow.  We kept sharing, purchasing, and saving behind the sign-in wall in order to encourage account creation. </p>
+
+<figure>
+	<img src="../static/images/mplace_sitemap.png" class="2x"/>
+	<figcaption>Mapping flows for signed out users </figcaption>
+</figure>
+<p> Because we were constrained by the change-resistant nature of our existing users, we knew we could not replace our homepage with a more descriptive landing page that would orient those unfamiliar to the product.   Instead, I decided to follow the common pattern of linking to an &ldquo;about page&rdquo; that describes the value of the product in detail. </p>
+
+<img src="../static/images/Learnabout.png" class="2x"/>
+
+<h2>Account creation, payments, and social sharing </h2>
+
+<p> Because BloomBoard account managers created all enterprise accounts, we didn’t have a UI for individual users to create their own accounts.  Additionally, enterprise users paid for resources by requesting credits from their district, so our site did not offer a way for non-enterprise users to purchase.  I created both interaction and visual designs for these flows and redid the sign-in experience for all users.  Lastly, sharing in the old marketplace was limited to in-product sharing and was designed to encourage top-down, administrator-to-teacher recommendations.  In an effort to promote more viral growth, we redesigned the sharing experience to include social sharing and sharing with anyone &mdash; with or without a BloomBoard account &mdash; via email.  </p>
+
+<!-- <div class="multiple-images"> -->
+<figure> 
+	<img class="2x" src="../static/images/Createaccount.png"/>
+	<figcaption> Account creation page and credit card payments </figcaption>
+</figure>
+
+<h2>Making it mobile friendly</h2>
+
+<p> Before we opened up the marketplace to consumers, the site had been accessed primarily during official sessions on school laptops, so we were left with many legacy designs that weren't mobile friendly. We needed to tweak, and in some cases entirely redo, all pages in the site to optimize for mobile devices. I prioritized the landing page, as we anticipated unregistered users receiving and clicking through from share emails on their phones. </p>
+
+<img src="../static/images/mobile.png" class="2x"/>
+
 
 {% endfilter %}
+
 {% endblock body %}
+
+
+
+{% block headerText %}
+	<div class='title'>About the project</div>
+	<p>
+		To increase our user base and support the bottom-up, teacher-empowered brand we wanted, we decided to make BloomBoard’s marketplace of professional development content accessible to individual users, not just school district enterprise accounts. 
+ 	</p>
+	<div class='title'>My role</div>
+	<p>
+		I worked closely with the product manager to scope and design all of the features necessary to make the marketplace accessible to non-enterprise users.  I completed all interaction and visual designs, and worked directly with engineers to ensure that mobile designs worked on a variety of screen sizes.   
+ 	</p>
+
+ 	<div class="title">Results </div>
+ 	<p>
+ 		We successfully soft-launched our marketplace to the public, but are waiting to do a marketing push until most teachers are back in school. 
+ 	</p>
+{% endblock headerText %}
+
+

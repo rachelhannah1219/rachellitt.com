@@ -2,12 +2,17 @@
 {% block title %}{{ title }}{% endblock title %}
 {% block content %}
 
-	<nav>
-		<a href='/'>RACHEL IS THE BEST</a>
+	<nav id="nav-top">
+		<a href='/'>
+	<!-- 		<span class="nav-arrow">&larr;</span> -->
+			RACHEL HANNAH LITT
+		</a>
 	</nav>
 	<header id="post-header">
 		<div class="header-img-container">
-			<img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/>
+			<div class="header-image" style="background-image:url({{ headerImg }})"> </div>
+			<!-- <img src=" {{ headerImg }}"/> -->
+			<!-- <img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/> -->
 			<span class="img-cover" style="background: {{ color }}" />
 		</div>
 		<div class="wrapper">
@@ -16,9 +21,12 @@
 					<div class="content">{{ title }}</div>
 				</div>
 				<div class="meta-information">
-					Focus on: awesome
+					<span class="intro"> {{year}} </span> 
+					<span class="secondary"> {{role}} </span> 
 					<br>
-					I'm the: best
+					<span class="intro"> Focus on </span>
+					<span class="secondary"> {{ focus }} </span>
+					
 				</div>
 			</div>
 
@@ -30,7 +38,7 @@
 		</div>
 	</header>
 
-	<section id="wrapper" class="post clearfix">
+	<section class="post-wrapper" class="post clearfix">
 		<article class="post">
 			<section class="post-body">
 				{% block body %}
@@ -38,20 +46,11 @@
 				{% endblock body %}
 			</section>
 		</article>
-
-		<footer id="post-meta" class="clearfix">
-			<!-- <div class="date">{{ date|date:"M j" }}</div> -->
-			{% if tags %}
-				<div><span>Tags</span> {{ tags }} </div>
-			{% endif %}
-		</footer>
-
-		<footer class="post-footer">
 			<nav id="post-nav">
 				<span class="prev">
 				{% if prevPost %}
 					<a href='/{{ prevPost.path }}'>
-						<span class="arrow">&larr;</span> {{ prevPost.title }}
+						<span class="nav-arrow">&larr;</span> {{ prevPost.title }}
 					</a>
 				{% endif %}
 				</span>
@@ -59,12 +58,18 @@
 				<span class="next">
 					{% if nextPost %}
 						<a href='/{{ nextPost.path }}'>
-							{{ nextPost.title }} <span class="arrow">&rarr;</span>
+							{{ nextPost.title }} <span class="nav-arrow">&rarr;</span>
 						</a>
 					{% endif %}
 				</span>
 			</nav>
-		</footer>
+			<footer>
+				<div class="back"> 
+					<a href="..">RACHEL HANNAH LITT </a>
+				</div>
+				<div class="color-bar" style="background: {{ color }}"></div>
+			</footer>
+
 	</section>
 
 {% endblock content %}

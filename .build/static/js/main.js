@@ -1,6 +1,16 @@
 $(document).ready(function() {
 	$('p > img').unwrap();
+
+	$.featherlightGallery.prototype.afterContent = function() {
+	  var caption = this.$currentTarget.find('img').attr('alt');
+	  this.$instance.find('.caption').remove();
+	  $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+	};
+
 });
+
+
+
 
 // To make images retina, add a class "2x" to the img element
 // and add a <image-name>@2x.png image. Assumes jquery is loaded.
@@ -34,6 +44,15 @@ function retina() {
 		path = path.replace(".jpg", "@2x.jpg");
 		
 		$(image).attr("src", path);
+	});
+	$("a.2x").map(function(i, image) {
+		
+		var path = $(image).attr("href");
+		
+		path = path.replace(".png", "@2x.png");
+		path = path.replace(".jpg", "@2x.jpg");
+		
+		$(image).attr("href", path);
 	});
 };
  

@@ -64,8 +64,8 @@ def preBuild(site):
 	indexes = xrange(0, len(Global["posts"]))
 	
 	for i in indexes:
-		if i+1 in indexes: Global["posts"][i]['prevPost'] = Global["posts"][i+1]
-		if i-1 in indexes: Global["posts"][i]['nextPost'] = Global["posts"][i-1]
+		if i-1 in indexes: Global["posts"][i]['prevPost'] = Global["posts"][i-1]
+		if i+1 in indexes: Global["posts"][i]['nextPost'] = Global["posts"][i+1]
 
 
 def preBuildPage(site, page, context, data):

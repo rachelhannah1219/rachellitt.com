@@ -1,16 +1,72 @@
-title: Project Four
-thumbnail: /static/images/image-thumbnail.jpg
-tags: Image
-date: 4-10-2013
-color: gray
-headerImg: /static/image/image-thumbnail.jpg
-projectThumb: /static/image/image-thumbnail.jpg
+
+title: What teachers do to grow
+thumbnail: ./static/images/Teachergrowth.png
+tags: Research 
+date: 8-08-2015
+color: #E8E933
+headerImg: ../static/images/research-head.png
+projectThumb: ../static/images/image-thumbnail.jpg
+focus: User research & product strategy
+year: Sept 2013
+role: Researcher
+
+
+
 
 {% extends "post.html" %}
 {% block body %}
 {% filter markdown %}
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+<h2> Not &ldquo;what's wrong?&rdquo; but &ldquo;what else?&rdquo; </h2>
+
+<p> Since our research goal was to understand what would help us turn our product into something teachers embraced, we knew that asking “what’s wrong with our product?” would limit us from looking past what we already had.  We settled on the broad core question of “what do teachers do to grow?” and an informal, conversational interview format guided by a list of specific questions we wanted answered. We hoped to understand what motivates teachers to grow, what experiences and tools they seek out in order to do so, and where our product fit into that context.  </p>
+
+<img src="../static/images/Questions.jpg" class="2x"/>
+
+<p> We targeted both current customers and non-customers, focusing especially on teachers rather than our usual administrator-skewed research pool.  In total, we interviewed 47 teachers across five states.</p>
+
+<h2>The Elito method </h2>
+
+<p> Our analysis began with synthesis using the ELITO method.  The ELITO method of data analysis focuses on mapping individual pieces of raw data (a specific quote or fact from an interviewee) with an insight or judgement inferred from that observation, suggested thematic groupings, and potential responses or solutions to the judgement.  We captured this data &mdash; generated from hundreds of pages of notes &mdash; in a spreadsheet we shared with the team to encourage them to come up with their own insights and themes. </p>
+
+<img style="border:1px solid #eee" src="../static/images/Elito.png" class="2x"/>
+
+<h2>Disproving assumptions; highlighting tensions  </h2>
+<p>The end result was a company-wide presentation in which we shared our key takeaways.  These included teachers’ preferred mechanisms for growth as well as their thoughts on many of the assumptions on which we had based our product design.  We were careful to call out areas where we saw tensions between what we observed and our company goals and product strategy. </p>
+
+<img src="../static/images/Tensions.png" class="2x"/>
+
+<p>One of the most salient tensions was that between evaluations and growth; negative concerns associated with the evaluation process prevented teachers from understanding our product as a place to learn and explore. This was not something our team had previously considered, but feelings about the evaluations &mdash; ranging from fear to vitriol &mdash; were so universally expressed that our strongest recommendation to the team was to a separation of our evaluation platform from our  professional development marketplace. </p>
+
+<img src="../static/images/evaluationsarescary.jpg" class="2x"/>
+
+
+<h2> Product strategy changes </h2>
+<p>As a result of information we shared about the inhibiting nature of evaluations, the team embarked on a major product overhaul in which we separated the evaluation tools from the marketplace, both in location (a new URL) and in brand.  Later, the same research and conclusions were referenced to create a revised product and business strategy that flipped our focus from selling an enterprise tool to creating a compelling consumer experience for teachers.  </p>
+
 
 {% endfilter %}
+
 {% endblock body %}
+
+
+
+{% block headerText %}
+	<div class='title'>About the project</div>
+	<p>
+		In fall 2013, we had professional development content and a captive audience of teachers, but no engagement with the content. While our team had done some research about what professional development didn’t work, we had not yet identified what teachers actually choose to do to improve their practice. 
+	</p>
+	<div class='title'>My role </div>
+	<p>
+		The user experience team proposed a broad-reaching generative research project that would focus on learning what educators truly found valuable. I worked with two other researchers to craft a plan and conduct research with almost fifty educators  
+ 	</p>
+ 	
+ 	<div class='title'> Results </div>
+ 	<p> The research led to a key shift in product strategy in order to foster teacher engagement &mdash; the cleaving of our evaluation product from our marketplace.  
+ 	</p>
+
+{% endblock headerText %}
+
+
+
+

@@ -1,16 +1,58 @@
-title: Project Three
-thumbnail: /static/images/image-thumbnail.jpg
-tags: Image
-date: 13-09-2013
-color: green
-headerImg: /static/image/image-thumbnail.jpg
-projectThumb: /static/image/image-thumbnail.jpg
+title: Scalable year-end reporting
+thumbnail: ./static/images/EOY.png
+tags: IA & Interaction
+date: 9-08-2015
+color: #22365B
+headerImg: ../static/images/Eoy-head.png
+projectThumb: ../static/images/image-thumbnail.jpg
+focus: Interaction Design 
+year: Sept 2014
+role: Lead researcher & designer 
+
+
 
 {% extends "post.html" %}
 {% block body %}
 {% filter markdown %}
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+<h2> Mapping user and technical requirements </h2>
+
+<p> The new toolset needed to meet a diverse set of  state and district requirements, but the company had little development time to devote to the project. Acknowledging that time constraints would prevent us from building a perfectly reusable system, I worked with the product manager to identify the core pieces to optimize.  Our team's solution was reusable mix-and-match front end components served by custom back-end scripts specific to each state.   I created a high-level requirements map for the company to understand the solution,  and to serve as a guide throughout the development process. </p>
+
+<img style="border:1px solid #eee" src="../static/images/EOY-map.png" class="2x"/>
+
+<h2>Concept validation: prototypes &amp; remote user testing </h2>
+
+<p> In conjunction with an engineer and data specialist, I developed clickable design prototypes for remote user testing of the new flow.  We focused our research on obtaining feedback on our two primary goals: ensuring the evaluator task flow was crystal clear, and making transparent the derivation of the final score.   As a result of user testing, we were able to confirm that a dedicated end-of-year progress dashboard made the task set clearer.  We  were also able to  simplify the evaluator dashboard quite a bit,  allowing the user to maintain focus on the outstanding tasks. </p>
+
+<img src="../static/images/Eoy-dash.png" class="2x"/>
+
+<h2>Mix-and-match front end components to create a single location for inputs </h2>
+
+<p> The keystone of the project was the worksheet, which displays the various components that comprise each educator's final score.  Based on ran analysis of state and district calculation formulas, I identified common tasks evaluators needed to complete in order to generate scores &mdash; what we called &ldquo;input components.&rdquo; The result was a design for reusable front-end components that, in various permutations, allowed us to create  one single end-of-year worksheet for each educator. </p>
+
+<figure>
+	<img style="border:1px solid #eee; width: 600px;" src="../static/images/EOY-input.png" class="2x"/>
+	<figcaption> End of year worksheet: sample input components </figcaption>
+</figure>
 
 {% endfilter %}
+
 {% endblock body %}
+
+
+
+{% block headerText %}
+	<div class='title'>About the project</div>
+	<p>
+		For three years,  BloomBoard used Tableau (a third-party tool) to create reports for educators’ end-of-year evaluation scores,  a core offering of all of our big contracts.  This solution &mdash; external to our application &mdash; created a disjointed, opaque, and inconveniently slow experience for our users.  For our company, each custom report required too many resources.  We needed to convert this manual data extraction and calculation into a scalable customer-facing product that still met compliance requirements. 
+ 	</p>
+	<div class='title'>My role</div>
+	<p>
+		 I worked with a product manager to identify requirements, then served as the sole designer for the full set of tools: a workflow dashboard, an interactive worksheet, and an aggregated data report.  
+ 	</p>
+ 	<div class="title">Results</div>
+ 	<p>
+ 		The new tools allowed our company to transition 69,000 users from Tableau to our own end-of-year scoring product.
+ 	<p>
+{% endblock headerText %}
