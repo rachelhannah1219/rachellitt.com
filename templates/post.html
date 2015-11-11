@@ -15,28 +15,38 @@
 			<!-- <img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/> -->
 			<span class="img-cover" style="background: {{ color }}" />
 		</div>
-		<div class="wrapper">
+		<div class="post-wrapper">
 			<div class="title-block-container">
 				<div class="title-block" style="color: {{ color }}; border-color: {{ color }}">
 					<div class="content">{{ title }}</div>
 				</div>
-				<div class="meta-information">
-					<span class="intro"> {{year}} </span> 
-					<span class="secondary"> {{role}} </span> 
-					<br>
-					<span class="intro"> Focus on </span>
-					<span class="secondary"> {{ focus }} </span>
-					
-				</div>
+			<div class="meta-information" style="border-color: {{ color }}">
+					<span class="metafirst">
+						<span class="intro"> {{year}} </span> 
+						<span class="secondary"> {{role}} </span> 
+					</span>
+					<span class="pipe"> | </span>
+					<span class="metasecond">
+						<span class="intro"> Focus on </span>
+						<span class="secondary"> {{ focus }} </span>
+					</span>
 			</div>
+			<div class="side-img ">
+				<a href="{{ headerSideImg }}" data-featherlight="image" class="2x">
+					<img src="{{ headerSideImg }}" alt="" class="2x"/>
+				</a>
+			</div>
+				
 
 			<div class="header-text">
 				{% block headerText %}
 					This is where the header text goes
 				{% endblock headerText %}
 			</div>
+			<div class="clearfix"> </div>
 		</div>
 	</header>
+</div>
 
 	<section class="post-wrapper" class="post clearfix">
 		<article class="post">
@@ -67,7 +77,7 @@
 				<div class="back"> 
 					<a href="..">RACHEL HANNAH LITT </a>
 				</div>
-				<div class="color-bar" style="background: {{ color }}"></div>
+				<!-- <div class="color-bar" style="background: {{ color }}"></div> -->
 			</footer>
 
 	</section>

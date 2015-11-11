@@ -1,1 +1,6 @@
-{"aws-bucket-name":"rachellitt.com","aws-access-key":"AKIAIEPU7XZSCZCRU4EQ","aws-bucket-website":"racheldotcom.s3-website-us-east-1.amazonaws.com","port":8463}
+{
+    "aws-access-key": "AKIAIEPU7XZSCZCRU4EQ",
+    "aws-bucket-name": "rachellitt.com",
+    "aws-bucket-website": "rachellitt.com.s3-website-us-east-1.amazonaws.com",
+    "port": 8463
+}
